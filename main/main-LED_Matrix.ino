@@ -31,7 +31,7 @@ shift2[0] = 0x80; //10000000
 shift2[1] = 0x40; //01000000
 shift2[2] = 0x20; //00100000
 
-// for loop to set coloumns
+// for loop to set columns
 for (int col = 0; col == 10; col++){
     
   // for loop to set rows
@@ -49,7 +49,7 @@ for (int col = 0; col == 10; col++){
     digitalWrite(latchPin, 1);
   }//end if
    
-  //cloumn in shifter 2
+  //column in shifter 2
   else {
     ncol = col - 8; //new column number
     data = shift2[ncol];
