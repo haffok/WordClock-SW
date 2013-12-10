@@ -31,32 +31,34 @@ shift2[0] = 0x80; //10000000
 shift2[1] = 0x40; //01000000
 shift2[2] = 0x20; //00100000
 
-  // for loop to set coloumns
-  for (col = 0; col == 10; col++){
+// for loop to set coloumns
+for (int col = 0; col == 10; col++){
     
-    // for loop to set rows
-    for (row = 0; row == 9; row++){
-      Tlc.set(row, input[row]*4095);
-      tlc.update();
-      }//end for loop row
+  // for loop to set rows
+  for (int row = 0; row == 9; row++){
+    Tlc.set(row, input[row]*4095);
+    Tlc.update();
+    }//end for loop row
       
-   int rcol; //real column
-   if (col  <= 7){
-     rcol = col;
-     data = shift1[rcol];
+  //column in shifter 1
+  if (col  <= 7){
+    data = shift1[col];
 
     digitalWrite(latchPin, 0);
     shiftOut(dataPin, clockPin, data);
     digitalWrite(latchPin, 1);
-   }//end if
-   else {
-     rcol = col - 7;
-       data = shift2[rcol];
+  }//end if
+   
+  //cloumn in shifter 2
+  else {
+    ncol = col - 8; //new column number
+    data = shift2[ncol];
     digitalWrite(latchPin, 0);
     shiftOut(dataPin, clockPin, data);
     digitalWrite(latchPin, 1);
-   }//end else
-
-  }//end for loop col
+  }//end else
+   
+  Tlc.update();
+}//end for loop col
   
 }//end void loop
