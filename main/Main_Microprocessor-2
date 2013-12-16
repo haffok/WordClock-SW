@@ -19,10 +19,17 @@ void loop() {
   //create Matrix
   void cMatrix(time_t time){
     ledString[[9],[10]]; //Array [0-10],[0-9]
-    int hourAndMinuteMode;//sets hourAndMinuteModeMode to Mode:
     
     //Second-Mode
     if (modeSc == true){
+    
+    Switch (second()){
+      case 0:
+        setTenZERO(); //First number
+        setSglZERO(); //Second number
+        
+        
+    }//end switch-case
       }//end if
       
     //Hour-Mode
@@ -38,40 +45,87 @@ void loop() {
         if (tm.hour == 1){
           setHrEINS();
           }//end if
+        else {
         setHour(tm.hour());
-        }//end if
+        }//end else
+        
+        //xx:05
       else if (minute() < 10){
         setHour(tm.hour());
+        setMinFUNF();
+        setNACH();
         }//end else if
+        
+        //xx:10
       else if (minute() < 15){
         setHour(tm.hour());
+        setMinZEHN();
+        setNACH();
         }//end else if
+        
+        //xx:15
       else if (minute() < 20){
         setHour(tm.hour());
+        setVIERTEL();
+        setNACH();
         }//end else if
+        
+        //xx:20
       else if (minute() < 25){
         setHour(tm.hour() - 1);
+        setMinZEHN();
+        setVOR();
         }//end else if
+        
+        //xx:25
        else if (minute() < 30){
         setHour(tm.hour() - 1);
+        setMinFUNF();
+        setVOR();
         }//end else if
+        
+        //xx:30
        else if (minute() < 35){
         setHour(tm.hour() - 1);
+        setHALB();
         }//end else if
+        
+        //xx:35
        else if (minute() < 40){
         setHour(tm.hour() - 1);
+        setMinFUNF();
+        setNACH();
+        setHALB();
         }//end else if
+        
+        //xx:40
        else if (minute() < 45){
         setHour(tm.hour() - 1);
+        setZEHN();
+        setNACH();
+        setHALB();
         }//end else if
+        
+        //xx:45
        else if (minute() < 50){
         setHour(tm.hour() - 1);
+        setDREIVIERTEL();
         }//end else if
+        
+        //xx:50
       else if (minute() < 55){
         setHour(tm.hour() - 1);
+        setMinZEHN();
+        setVOR();
+      }//end else if
+      
+        //xx:55
        else if (minute() < 60){
         setHour(tm.hour() - 1);
+        setMinFUNF();
+        setVOR();
         }//end else if
+        
 }//end else if
 
       
@@ -85,11 +139,6 @@ void loop() {
     
     }//end method cmatrix
 
-//if Hour is full hour use this method to set LED_Matrix for hours
-void hourFull(){
-  switch (hour(){
-    case 
-  }//end switch - case
   
   void setHour(int printHr){
     switch (printHr){
