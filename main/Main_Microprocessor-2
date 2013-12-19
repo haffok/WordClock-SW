@@ -27,10 +27,189 @@ void loop() {
       case 0:
         setTenZERO(); //First number (tenner)
         setSglZERO(); //Second number(single)
-        
+      case 1:
+        setTenZERO();
+        setSglONE();
+      case 2:
+        setTenZERO();
+        setSglTWO();
+      case 3:
+        setTenZERO();
+        setSglTHREE();
+      case 4:
+        setTenZERO();
+        setSglFOUR();
+      case 5:
+        setTenZERO();
+        setSglFIFE();
+      case 6:
+        setTenZERO();
+        setSglSIX();
+      case 7:
+        setTenZERO();
+        setSglSEVEN();
+      case 8:
+        setTenZERO();
+        setSglEIGHT();           
+      case 9:
+        setTenZERO();
+        setSglNEUN();
+      case 10:
+        setTenONE();
+        setSglZERO();
+      case 11:
+        setTenONE();
+        setSglONE();
+      case 12:
+        setTenONE();
+        setSglTWO();
+      case 13:
+        setTenONE();
+        setSglTHREE();
+      case 14:
+        setTenONE();
+        setSglFOUR();
+      case 15:
+        setTenONE();
+        setSglFIFE();
+      case 16:
+        setTenONE();
+        setSglSIX();        
+      case 17:
+        setTenONE();
+        setSglSEVEN();
+      case 18:
+        setTenONE();
+        setSglEIGHT();
+      case 19:
+        setTenONE();
+        setSglNINE();
+      case 20:
+        setTenTWO();
+        setSglZERO();
+      case 21:
+        setTenTWO();
+        setSglONE();
+      case 22:
+        setTenTWO();
+        setSglTWO();
+      case 23:
+        setTenTWO();
+        setSglTHREE();
+      case 24:
+        setTenTWO();
+        setSglFOUR();
+      case 25:
+        setTenTWO();
+        setSglFIFE();
+      case 26:
+        setTenTWO();
+        setSglSIX();
+      case 27:
+        setTenTWO();
+        setSglSEVEN();
+      case 28:
+        setTenTWO();
+        setSglEIGHT();           
+      case 29:
+        setTenTWO();
+        setSglNINE();
+      case 30:
+        setTenTHREE();
+        setSglZERO();
+      case 31:
+        setTenTHREE();
+        setSglONE();
+      case 32:
+        setTenTHREE();
+        setSglTWO();
+      case 33:
+        setTenTHREE();
+        setSglTHREE();
+      case 34:
+        setTenTHREE();
+        setSglFOUR();
+      case 35:
+        setTenTHREE();
+        setSglFIFE();
+      case 36:
+        setTenTHREE();
+        setSglSIX();        
+      case 37:
+        setTenTHREE();
+        setSglSEVEN();
+      case 38:
+        setTenTHREE();
+        setSglEIGHT();
+      case 39:
+        setTenTHREE();
+        setSglNINE();
+      case 40:
+        setTenFOUR();
+        setSglZERO();
+      case 41:
+        setTenFOUR();
+        setSglONE();
+      case 42:
+        setTenFOUR();
+        setSglTWO();
+      case 43:
+        setTenFOUR();
+        setSglTHREE();
+      case 44:
+        setTenFOUR();
+        setSglFOUR();        
+      case 45:
+        setTenFOUR();
+        setSglFIFE();
+      case 46:
+        setTenFOUR();
+        setSglSIX();        
+      case 47:
+        setTenFOUR();
+        setSglSEVEB();
+      case 48:
+        setTenFOUR();
+        setSglEIGHT();
+      case 49:
+        setTenFOUR();
+        setSglNINE();
+      case 50:
+        setTenFIFE();
+        setSglZERO();
+      case 51:
+        setTenFIFE();
+        setSglONE();
+      case 52:
+        setTenFIFE();
+        setSglTWO();
+      case 53:
+        setTenFIFE();
+        setSglTHREE();
+      case 54:
+        setTenFIFE();
+        setSglFOUR();
+      case 55:
+        setTenFIFE();
+        setSglFIFE();
+      case 56:
+        setTenFIFE();
+        setSglSIX();
+      case 57:
+        setTenFIFE();
+        setSglSEVEN();
+      case 58:
+        setTenFIFE();
+        setSglEIGHT();           
+      case 59:
+        setTenFIFE();
+        setSglNINE();
+      case 60:
+        setTenSIX();
+        setSglZERO();
         
     }//end switch-case
-      }//end if
+  }//end if
       
     //Hour-Mode
     else if (modeHr == true) {
@@ -370,21 +549,19 @@ void loop() {
      
      void setTenZERO(){
       ledString[[1],[2]] = 1;
-      ledString[[1],[3]] = 1;
       ledString[[2],[1]] = 1;
-      ledString[[2],[4]] = 1;
+      ledString[[2],[3]] = 1;
       ledString[[3],[0]] = 1;
-      ledString[[3],[5]] = 1;
+      ledString[[3],[4]] = 1;
       ledString[[4],[0]] = 1;
-      ledString[[4],[5]] = 1;
+      ledString[[4],[4]] = 1;
       ledString[[5],[0]] = 1;
-      ledString[[5],[5]] = 1;
+      ledString[[5],[4]] = 1;
       ledString[[6],[0]] = 1;
-      ledString[[6],[5]] = 1;
+      ledString[[6],[4]] = 1;
       ledString[[7],[1]] = 1;
-      ledString[[7],[4]] = 1;
+      ledString[[7],[3]] = 1;
       ledString[[8],[2]] = 1;
-      ledString[[8],[3]] = 1;
      }//end method setTenZERO
      
      void setTenONE(){
@@ -542,8 +719,177 @@ void loop() {
       ledString[[8],[0]] = 1;
      }//end method setTenNINE
      
+  void setSglZERO(){
+      ledString[[1],[8]] = 1;
+      ledString[[2],[7]] = 1;
+      ledString[[2],[9]] = 1;
+      ledString[[3],[6]] = 1;
+      ledString[[3],[10]] = 1;
+      ledString[[4],[6]] = 1;
+      ledString[[4],[10]] = 1;
+      ledString[[5],[6]] = 1;
+      ledString[[5],[10]] = 1;
+      ledString[[6],[6]] = 1;
+      ledString[[6],[10]] = 1;
+      ledString[[7],[7]] = 1;
+      ledString[[7],[9]] = 1;
+      ledString[[8],[8]] = 1;
+     }//end method setSglZERO
      
+     void setSglONE(){
+      ledString[[1],[10]] = 1;
+      ledString[[2],[9]] = 1;
+      ledString[[2],[10]] = 1;
+      ledString[[3],[8]] = 1;
+      ledString[[3],[10]] = 1;
+      ledString[[4],[7]] = 1;
+      ledString[[4],[10]] = 1;
+      ledString[[5],[6]] = 1;
+      ledString[[5],[10]] = 1;
+      ledString[[6],[10]] = 1;
+      ledString[[7],[10]] = 1;
+      ledString[[8],[10]] = 1;
+     }//end method setSglONE
+ 
+      void setSglTWO(){
+      ledString[[1],[8]] = 1;
+      ledString[[2],[7]] = 1;
+      ledString[[2],[9]] = 1;
+      ledString[[3],[6]] = 1;
+      ledString[[3],[10]] = 1;
+      ledString[[4],[10]] = 1;
+      ledString[[5],[9]] = 1;
+      ledString[[6],[8]] = 1;
+      ledString[[7],[7]] = 1;
+      ledString[[8],[6]] = 1;
+      ledString[[8],[7]] = 1;
+      ledString[[8],[8]] = 1;
+      ledString[[8],[9]] = 1;
+      ledString[[8],[10]] = 1;
+     }//end method setSglTWO
      
-        //setSglZERO(); //Second number(single)
+          void setSglTHREE(){
+      ledString[[1],[6]] = 1;
+      ledString[[1],[7]] = 1;
+      ledString[[1],[8]] = 1;
+      ledString[[2],[9]] = 1;
+      ledString[[2],[10]] = 1;
+      ledString[[3],[8]] = 1;
+      ledString[[3],[7]] = 1;
+      ledString[[4],[6]] = 1;
+      ledString[[4],[7]] = 1;
+      ledString[[5],[8]] = 1;
+      ledString[[5],[9]] = 1;
+      ledString[[6],[10]] = 1;
+      ledString[[7],[8]] = 1;
+      ledString[[7],[9]] = 1;
+      ledString[[8],[6]] = 1;
+      ledString[[8],[7]] = 1;
+     }//end method setSglTHREE
+     
+          void setSglFOUR(){
+      ledString[[1],[9]] = 1;
+      ledString[[2],[8]] = 1;
+      ledString[[2],[7]] = 1;
+      ledString[[3],[6]] = 1;
+      ledString[[3],[7]] = 1;
+      ledString[[4],[7]] = 1;
+      ledString[[4],[9]] = 1;
+      ledString[[5],[6]] = 1;
+      ledString[[5],[9]] = 1;
+      ledString[[6],[6]] = 1;
+      ledString[[6],[7]] = 1;
+      ledString[[6],[8]] = 1;
+      ledString[[6],[9]] = 1;
+      ledString[[6],[10]] = 1;
+      ledString[[7],[9]] = 1;
+      ledString[[8],[10]] = 1;
+     }//end method setSglFOUR
+     
+          void setSglFIFE(){
+      ledString[[1],[6]] = 1;
+      ledString[[1],[7]] = 1;
+      ledString[[1],[8]] = 1;
+      ledString[[1],[9]] = 1;
+      ledString[[1],[10]] = 1;
+      ledString[[2],[6]] = 1;
+      ledString[[3],[6]] = 1;
+      ledString[[4],[6]] = 1;
+      ledString[[4],[7]] = 1;
+      ledString[[5],[8]] = 1;
+      ledString[[5],[9]] = 1;
+      ledString[[6],[10]] = 1;
+      ledString[[7],[8]] = 1;
+      ledString[[7],[7]] = 1;
+      ledString[[8],[6]] = 1;
+      ledString[[8],[7]] = 1;      
+     }//end method setSglFIFE
+     
+          void setSglSIX(){
+      ledString[[1],[10]] = 1;
+      ledString[[1],[9]] = 1;
+      ledString[[2],[8]] = 1;
+      ledString[[3],[7]] = 1;
+      ledString[[4],[6]] = 1;
+      ledString[[4],[8]] = 1;
+      ledString[[5],[7]] = 1;
+      ledString[[5],[9]] = 1;
+      ledString[[6],[6]] = 1;
+      ledString[[6],[10]] = 1;
+      ledString[[7],[7]] = 1;
+      ledString[[7],[9]] = 1;
+      ledString[[8],[8]] = 1;
+     }//end method setSglSIX
+     
+          void setSglSEVEN(){
+      ledString[[1],[6]] = 1;
+      ledString[[1],[7]] = 1;
+      ledString[[1],[8]] = 1;
+      ledString[[1],[9]] = 1;
+      ledString[[1],[10]] = 1;
+      ledString[[2],[9]] = 1;
+      ledString[[3],[8]] = 1;
+      ledString[[4],[8]] = 1;
+      ledString[[5],[7]] = 1;
+      ledString[[6],[7]] = 1;
+      ledString[[7],[6]] = 1;
+      ledString[[8],[6]] = 1;
+     }//end method setSglSEVEN
+     
+          void setSglEIGHT(){
+      ledString[[1],[8]] = 1;
+      ledString[[2],[7]] = 1;
+      ledString[[2],[9]] = 1;
+      ledString[[3],[6]] = 1;
+      ledString[[3],[10]] = 1;
+      ledString[[4],[7]] = 1;
+      ledString[[4],[8]] = 1;
+      ledString[[4],[9]] = 1;
+      ledString[[5],[7]] = 1;
+      ledString[[5],[9]] = 1;
+      ledString[[6],[6]] = 1;
+      ledString[[6],[10]] = 1;
+      ledString[[7],[7]] = 1;
+      ledString[[7],[9]] = 1;
+      ledString[[8],[8]] = 1;
+     }//end method setSglEIGHT
+     
+          void setSglNINE(){
+      ledString[[1],[8]] = 1;
+      ledString[[2],[7]] = 1;
+      ledString[[2],[9]] = 1;
+      ledString[[3],[6]] = 1;
+      ledString[[3],[10]] = 1;
+      ledString[[4],[7]] = 1;
+      ledString[[4],[9]] = 1;
+      ledString[[4],[10]] = 1;
+      ledString[[5],[8]] = 1;
+      ledString[[5],[10]] = 1;
+      ledString[[6],[9]] = 1;
+      ledString[[7],[8]] = 1;
+      ledString[[8],[7]] = 1;
+      ledString[[8],[6]] = 1;
+     }//end method setSglNINE     
+     
      
 }//end main method; void loop
