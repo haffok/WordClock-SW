@@ -1,6 +1,14 @@
 #include <Utils.h>
 #include <DCF77.h>
 #include <Time.h>
+
+//for Temperature-Sensor
+#include <Wire.h>
+#include <DS1631.h>
+#include <Arduino.h>
+#include <inttypes.h>
+
+
 using namespace Utils;
 #define DCF_PIN 2             // Connection pin to DCF 77 device
 #define DCF_INTERRUPT 0         // Interrupt number associated with pin
@@ -309,14 +317,122 @@ void loop() {
 
       
     //Temperature-Mode
-    else if (modeTr == true) {
-      }//end else if
+else if (modeTr == true) {
     
     
+    //Temperatures from 10 to 40 degrees
+    
+    //set temperature one time and refresh every full hour
+  do while (minute() < 1){
+    
+    while (conversationDone() == false) //if there is no temperture read set 00
+        {
+        setTenONE();
+        setSglZERO();
+    }//end while
+
+    int temperature = readTempOneShotInt();
+        
+    switch (temperature){;
+      case 10:
+        setTenONE();
+        setSglZERO();
+      case 11:
+        setTenONE();
+        setSglONE();
+      case 12:
+        setTenONE();
+        setSglTWO();
+      case 13:
+        setTenONE();
+        setSglTHREE();
+      case 14:
+        setTenONE();
+        setSglFOUR();
+      case 15:
+        setTenONE();
+        setSglFIFE();
+      case 16:
+        setTenONE();
+        setSglSIX();        
+      case 17:
+        setTenONE();
+        setSglSEVEN();
+      case 18:
+        setTenONE();
+        setSglEIGHT();
+      case 19:
+        setTenONE();
+        setSglNINE();
+      case 20:
+        setTenTWO();
+        setSglZERO();
+      case 21:
+        setTenTWO();
+        setSglONE();
+      case 22:
+        setTenTWO();
+        setSglTWO();
+      case 23:
+        setTenTWO();
+        setSglTHREE();
+      case 24:
+        setTenTWO();
+        setSglFOUR();
+      case 25:
+        setTenTWO();
+        setSglFIFE();
+      case 26:
+        setTenTWO();
+        setSglSIX();
+      case 27:
+        setTenTWO();
+        setSglSEVEN();
+      case 28:
+        setTenTWO();
+        setSglEIGHT();           
+      case 29:
+        setTenTWO();
+        setSglNINE();
+      case 30:
+        setTenTHREE();
+        setSglZERO();
+      case 31:
+        setTenTHREE();
+        setSglONE();
+      case 32:
+        setTenTHREE();
+        setSglTWO();
+      case 33:
+        setTenTHREE();
+        setSglTHREE();
+      case 34:
+        setTenTHREE();
+        setSglFOUR();
+      case 35:
+        setTenTHREE();
+        setSglFIFE();
+      case 36:
+        setTenTHREE();
+        setSglSIX();        
+      case 37:
+        setTenTHREE();
+        setSglSEVEN();
+      case 38:
+        setTenTHREE();
+        setSglEIGHT();
+      case 39:
+        setTenTHREE();
+        setSglNINE();
+      case 40:
+        setTenFOUR();
+        setSglZERO();
+    }//end switch-case
+  }//end do-while loop
+}//end else if
     
     
-    
-    }//end method cmatrix
+}//end method cmatrix
 
   
   void setHour(int printHr){
