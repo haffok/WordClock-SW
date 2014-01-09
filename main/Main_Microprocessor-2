@@ -5,8 +5,6 @@
 //for Temperature-Sensor
 #include <Wire.h>
 #include <DS1631.h>
-#include <Arduino.h>
-#include <inttypes.h>
 
 
 using namespace Utils;
@@ -16,7 +14,10 @@ time_t time;
 DCF77 DCF = DCF77(DCF_PIN,DCF_INTERRUPT); 
 
 void setup() {
-  
+
+  //Temperature-Sensor
+  Wire.begin();             // join I2C bus
+  Temp1.writeConfig(13);  // Set to 12-bit, 1-shot mode
 
 }//end method; void setup
 
@@ -27,6 +28,9 @@ void loop() {
   //create Matrix
   void cMatrix(time_t time){
     ledString[[9],[10]]; //Array [0-10],[0-9]
+    
+    //Dimming
+    
     
     //Second-Mode
     if (modeSc == true){
